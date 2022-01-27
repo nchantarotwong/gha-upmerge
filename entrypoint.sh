@@ -42,7 +42,7 @@ echo
 set -o xtrace
 
 # Do the merge
-git merge --no-ff --no-edit $INPUT_FROM_BRANCH --allow-unrelated-histories
+git merge --no-ff --no-edit $INPUT_FROM_BRANCH --allow-unrelated-histories --strategy-option ours
 
 # Push the branch
 git push --force origin $INPUT_TO_BRANCH
